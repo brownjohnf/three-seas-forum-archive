@@ -1,4 +1,8 @@
-%h1= @topic.title
+%ul.breadcrumb
+  %li
+    = link_to @topic.forum.name, @topic.forum
+    %span.divider >
+  %li.active= @topic.title
 
 = will_paginate @posts
 

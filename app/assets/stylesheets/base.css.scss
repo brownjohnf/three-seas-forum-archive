@@ -1,1 +1,8 @@
 @import "bootstrap_and_overrides";
+
+strong {
+  &.highlight {
+    color: $orange;
+    font-size: 20px;
+  }
+}

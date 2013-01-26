@@ -1,0 +1,21 @@
+- if @results.any?
+  = will_paginate @results
+
+  %dl
+  - @results.each do |result|
+    %dt
+      = link_to result.subject, result
+      %small
+        by
+        = User.find(result.user_id || 1).username
+        score
+        = result._score
+    - for highlight in result.highlight.content do
+      %dd= raw '...' + highlight + '...'
+    %dd= result.content.truncate(500, :separator => ' ')
+    %hr
+
+  = will_paginate @results
+- else
+  Your search returned no results, or you did not specify a query.
+

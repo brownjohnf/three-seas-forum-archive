@@ -17,6 +17,7 @@ ThreeSeasForum::Application.routes.draw do
   resources :posts, :only => [:index, :show]
   resources :topics, :only => [:index, :show]
   resources :forums, :only => [:index, :show]
+  resources :search, :only => :index
 
   # Sample resource route with options:
   #   resources :products do

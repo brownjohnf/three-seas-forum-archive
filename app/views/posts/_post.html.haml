@@ -1,4 +1,11 @@
-%h2= post.subject
-%p= post.text
-%p= link_to 'view post', post
+%h2
+  = post.subject
+  %small
+    posted
+    = Time.at(post.created_at).strftime('%d %B %Y')
+    by
+    = link_to post.author, post.user
+%p
+  = raw post.bbcode
+  = link_to 'view post', post
 %hr

@@ -1,6 +1,5 @@
-%ul
+= will_paginate
+%ul.nav.nav-tabs.nav-stacked
   - for topic in @topics do
-    %li
-      = link_to topic.title, topic
-      = topic.posts.count
+    %li= link_to "#{topic.title} (#{topic.posts.count})", topic
 = will_paginate

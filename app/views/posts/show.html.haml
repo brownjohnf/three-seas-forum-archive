@@ -1,3 +1,11 @@
-%h3 #{@post.forum.name} >> #{@post.topic.title} >>
+%ul.breadcrumb
+  %li
+    = link_to @post.forum.name, @post.forum
+    %span.divider >
+  %li
+    = link_to @post.topic.title, @post.topic
+    %span.divider >
+  %li.active= @post.subject
+
 %h1= @post.subject
-%p= @post.bbcode
+%p= raw @post.bbcode

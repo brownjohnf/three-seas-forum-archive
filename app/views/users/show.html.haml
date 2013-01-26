@@ -1,1 +1,14 @@
-%h1= @user.username
+%h1
+  = @user.username
+  %small
+    joined
+    = Time.at(@user.created_at).strftime('%d %B %Y')
+    |
+    = @user.posts.count
+    posts
+
+%hr
+
+= will_paginate @posts
+= render @posts
+= will_paginate @posts
