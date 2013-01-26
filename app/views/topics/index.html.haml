@@ -1,0 +1,6 @@
+%ul
+  - for topic in @topics do
+    %li
+      = link_to topic.title, topic
+      = topic.posts.count
+= will_paginate

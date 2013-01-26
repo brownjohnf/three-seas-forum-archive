@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @users = User.limit(1000)
+    @users = User.limit(10)
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 end

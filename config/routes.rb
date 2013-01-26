@@ -13,7 +13,10 @@ ThreeSeasForum::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   #
-  resources :users, :only => :index
+  resources :users, :only => [:index, :show]
+  resources :posts, :only => [:index, :show]
+  resources :topics, :only => [:index, :show]
+  resources :forums, :only => [:index, :show]
 
   # Sample resource route with options:
   #   resources :products do

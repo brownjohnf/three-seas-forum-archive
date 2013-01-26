@@ -1,0 +1,8 @@
+- for post in @posts do
+  %h1
+    = post.subject
+    %small
+      by
+      = link_to post.author, post.user
+  %p= raw post.bbcode
+  %pre= post.inspect
