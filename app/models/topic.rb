@@ -3,7 +3,7 @@ class Topic < ActiveRecord::Base
 
   belongs_to :forum
 
-  has_many :posts
+  has_many :posts, :dependent => :destroy
 
   default_scope :order => 'topic_last_post_time DESC'
 end

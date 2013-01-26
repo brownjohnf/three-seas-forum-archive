@@ -11,4 +11,36 @@
   .container
     .row
       .span12
+        .hero-unit
+          %h1
+            Three Seas Forum
+            %small the archives
+  .container
+    .row
+      .span12
+        %ul.nav.nav-pills
+          %li= link_to 'Forums', forums_path
+          %li= link_to 'Topics', topics_path
+          %li= link_to 'Posts', posts_path
+        %hr
+  .container
+    .row
+      .span12
         = yield
+:erb
+  <% if Rails.env.production? %>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '<%= ENV['GA_ACCOUNT'] %>']);
+      _gaq.push(['_setDomainName', '<%= ENV['GA_DOMAIN'] %>']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  <% end %>
