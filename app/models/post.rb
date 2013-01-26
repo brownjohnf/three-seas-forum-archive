@@ -1,7 +1,7 @@
 class Post < ActiveRecord::Base
 
   include Tire::Model::Search
-  #include Tire::Model::Callbacks
+  include Tire::Model::Callbacks
   index_name ELASTICSEARCH_INDEX
   mapping do
     indexes :subject, :as => 'subject', :index => :not_analyzed
