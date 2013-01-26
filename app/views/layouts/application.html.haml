@@ -31,8 +31,7 @@
             = text_field_tag 'q', nil, :class => 'span2 search-query', :placeholder => params[:q] ||= 'search...'
     .row
       .span12
-        - 5.times do
-          =render 'shared/adsense_5uph'
+        =render 'shared/adsense_h'
   .container
     .row
       .span12
@@ -43,7 +42,7 @@
         = render 'shared/adsense_h'
     .row
       .span12
-        The Three Seas Forum is hosted and maintained courtesy of
+        The Three Seas Forum archives are hosted and maintained courtesy of the
         = link_to 'Fadidi Digital Network', 'http://www.fadidi.com'
 :erb
   <% if Rails.env.production? %>
