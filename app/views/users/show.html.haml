@@ -1,6 +1,8 @@
 %h1
   = @user.username
   %small
+    = @user.rank.title unless @user.rank.nil?
+    |
     joined
     = Time.at(@user.created_at).strftime('%d %B %Y')
     |

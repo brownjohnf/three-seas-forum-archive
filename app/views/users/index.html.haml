@@ -1,6 +1,10 @@
+= will_paginate
+
 %ol
   - @users.each do |user|
     %li
       = user.username
       = user.posts.count
+      = user.rank.title unless user.rank.nil?
+
 = will_paginate

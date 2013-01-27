@@ -3,8 +3,7 @@
   %small
     posted
     = Time.at(post.created_at).strftime('%d %B %Y')
-    by
-    = link_to post.author, post.user
+    by #{link_to post.author, post.user}, #{post.user.rank.title}
 %p
   = raw post.bbcode
   = link_to 'view post', post
