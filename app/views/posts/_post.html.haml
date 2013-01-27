@@ -3,6 +3,10 @@
   %small
     posted
     = Time.at(post.created_at).strftime('%d %B %Y')
+    in
+    = link_to post.forum.name, post.forum
+    &rang;
+    = link_to post.topic.title, post.topic
     by #{link_to post.author, post.user}, #{post.user.rank.title}
 %p
   = raw post.bbcode
