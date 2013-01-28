@@ -18,6 +18,8 @@ ThreeSeasForum::Application.routes.draw do
   resources :topics, :only => [:index, :show]
   resources :forums, :only => [:index, :show]
   resources :search, :only => :index
+  
+  match '/faq', :to => 'statics#faq', :as => :faq
 
   # Sample resource route with options:
   #   resources :products do

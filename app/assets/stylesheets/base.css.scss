@@ -1,3 +1,9 @@
+/*
+$textColor: #858585;
+$linkColor: $textColor;
+$linkColorHover: $textColor;
+*/
+
 @import "bootstrap_and_overrides";
 
 strong {
@@ -5,4 +11,14 @@ strong {
     color: $orange;
     font-size: 20px;
   }
+}
+
+.decorator {
+  background-image: image-url('decorator.jpg');
+  background-repeat: repeat-x;
+  height: 30px;
+}
+
+.right {
+  text-align: right;
 }
