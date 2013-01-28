@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
   belongs_to :rank
 
   has_many :posts
+
+  default_scope :order => 'created_at ASC'
 end
