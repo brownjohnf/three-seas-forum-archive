@@ -11,6 +11,7 @@ gem 'bb-ruby'
 gem 'bootstrap-will_paginate'
 gem 'bootstrap-sass', '~> 2.2.2.0'
 gem 'tire'
+gem 'json', '1.7.7'
 
 # Gems used only for assets and not required
 # in production environments by default.
